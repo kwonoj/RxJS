@@ -6,6 +6,7 @@
   "module": "./dist/esm5/index.js",
   "es2015": "./dist/esm/index.js",
   "types": "./dist/types/index.d.ts",
+  "type": "module",
   "exports": {
     ".": {
       "node": {
@@ -180,6 +181,7 @@
     "dist/cjs/**/!(*.tsbuildinfo)",
     "dist/esm/**/!(*.tsbuildinfo)",
     "dist/esm5/**/!(*.tsbuildinfo)",
+    "dist/esmodule/**/!(*.tsbuildinfo)",
     "dist/types/**/!(*.tsbuildinfo)",
     "ajax",
     "fetch",

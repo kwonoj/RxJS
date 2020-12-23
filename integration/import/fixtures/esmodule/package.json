@@ -1,7 +1,8 @@
 {
-  "name": "rxjs-import-test-cjs",
+  "name": "rxjs-import-test-esmodule",
   "version": "0.0.1",
   "main": "./index.js",
+  "type": "module",
   "scripts": {
     "test": "node ./index.js"
   }

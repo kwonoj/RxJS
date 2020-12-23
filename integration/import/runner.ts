@@ -35,7 +35,8 @@ const execPromise = (cmd: string, cwd = projectRoot) =>
     }));
 
 enum IMPORT_TYPE {
-  COMMONJS = 'commonjs'
+  COMMONJS = 'commonjs',
+  ESMODULE = 'esmodule',
 }
 
 const prepareFixture = async (pkgPath: string, fixturePath: string) => {
