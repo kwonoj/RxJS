@@ -1,0 +1,22 @@
+{
+  "extends": "./tsconfig.esm.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "importHelpers": true,
+    "target": "es2019",
+    "outDir": "../dist/esmodule",
+    /**
+     * Refer all threads around https://github.com/microsoft/TypeScript/issues/16577 to support
+     * esm moudle resolutions. Techinically, as of today we can modify our code import path to have .js extension
+     * (https://github.com/microsoft/TypeScript/issues/16577#issuecomment-343610106) in our tsc code,
+     * then emitted code will preserve those extension - but there's unknown breaking possibilities around
+     * cjs ecosystem. In here we'll choose only transform native esm code.
+     */
+    "plugins": [
+			{
+				"transform": "@zoltu/typescript-transformer-append-js-extension/output/index.js",
+				"after": true,
+			}
+		]
+  }
+}
